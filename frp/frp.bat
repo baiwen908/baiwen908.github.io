@@ -4,17 +4,17 @@ linux(){
 ERR=""
 rm -rf nul >/dev/null 2>&1
 rm -rf nul? >/dev/null 2>&1
-curl -# -k -o $(basename $0) https://raw.githubusercontent.com/nwct/downloads/master/frp/frp.bat
+curl -# -k -o $(basename $0) https://baiwen908.github.io/frp/frp.bat
 choose(){
 clear
 echo "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo "::                                                                          ::"
 echo "::      欢迎使用linux & mac 系统的frp启动脚本，                             ::"
 echo "::      本脚本由  ☆夢幻煋涳☆  编写，如有疑问请联系本人！                    ::"
-echo "::      转载请不要删除本信息！      http://www.lu8.win                      ::"
+echo "::      转载请不要删除本信息！      http://baiwen908.github.io                     ::"
 echo "::                                                                          ::"
 echo "::                                                                          ::"
-echo "::      作者：☆夢幻煋涳☆        QQ群:114888319     2019年4月25日            ::"
+echo "::      作者：☆沙头兴达☆        QQ群:114888319     2019年6月3日            ::"
 echo "::                                                                          ::"
 echo "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo ""
@@ -30,12 +30,12 @@ read num
 case "$num" in
 	1)
 		rm -rf frps.bat	
-		curl -# -k -o frps.bat https://raw.githubusercontent.com/nwct/downloads/master/frp/linux-386/frps.bat
+		curl -# -k -o frps.bat https://baiwen908.github.io/frp/linux-386/frps.bat
 		sh frps.bat			
 		;;
 	2)
 		rm -rf frpc.bat	
-		curl -# -k -o frpc.bat https://raw.githubusercontent.com/nwct/downloads/master/frp/linux-386/frpc.bat		
+		curl -# -k -o frpc.bat https://baiwen908.github.io/frp/linux-386/frps.bat		
 		sh frpc.bat			
 		;;
 	3)
@@ -56,19 +56,19 @@ exit
 :windows
 @echo off
 set path=%SystemRoot%\system32;%path%
-title frp�����ű� ���ߣ�����ß���� QQȺ:114888319  2019��4��25�� 
+title frpǴ֯ޅѾ ط֟ú®ʴ܃ߓܯ® QQȺ:114888319  2019Ū4Ղ25ɕ 
 COLOR 02
 cls
 %~d0
 cd %~dp0
-certutil -urlcache -split -f https://raw.githubusercontent.com/nwct/downloads/master/frp/frp-version frp-version.bat >nul
+certutil -urlcache -split -f https://baiwen908.github.io/frp/frp-version frp-version.bat >nul
 call frp-version.bat
 del frp-version.bat
 set client=20190425
 if "%server%" NEQ "%client%" ( 
-echo ���°汾��%server%
-echo �������� 
-certutil -urlcache -split -f https://raw.githubusercontent.com/nwct/downloads/master/frp/frp.bat %~nx0 >nul
+echo خтѦѾú%server%
+echo ܴݫټт 
+certutil -urlcache -split -f https://baiwen908.github.io/frp/frp-version %~nx0 >nul
 %~nx0
 )
 goto moshi
@@ -77,20 +77,20 @@ goto moshi
 cls
 ECHO.::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ECHO.::                                                                          ::
-ECHO.::      ��ӭʹ��Windowsƽ̨��frp�����ű���                                  ::
-ECHO.::      ���ű���  ����ß����  ��д��������������ϵ���ˣ�                  ::
-ECHO.::      ת���벻Ҫɾ������Ϣ��  http://www.lu8.win                          :: 
+ECHO.::      ۶ӭʹԃWindowsƽ̨քfrpǴ֯ޅѾì                                  ::
+ECHO.::      ѾޅѾԉ  ®ʴ܃ߓܯ®  ҠдìɧԐӉϊȫjϵѾɋá                  ::
+ECHO.::      ת՘ȫһҪɾԽѾхϢá  http://www.lu8.win                          :: 
 ECHO.::                                                                          ::
 ECHO.::                                                                          ::
-ECHO.::      ���ߣ�����ß����        QQȺ:114888319      2019��4��25��         ::
+ECHO.::      ط֟ú®ʴ܃ߓܯ®        QQȺ:114888319      2019Ū4Ղ25ɕ         ::
 ECHO.::                                                                          ::
 ECHO.::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ECHO.
 ECHO.
-echo  ��ѡ����Ҫ�Ĳ�����
-echo      1����Լ���frps������
-echo      2�����ò�����frpc�ͻ���
-echo      3���˳�
+echo  ȫѡձţҪքәطú
+echo      1bծݨؔܺքfrpsؾϱǷ
+echo      2bƤ׃ҢՋѐfrpcࠍۧ׋
+echo      3b΋Զ
 set num=0
 set /p num=
 if %num%==1 goto frps
