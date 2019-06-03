@@ -1,13 +1,13 @@
  
 linux(){
-notice=`curl -k -s https://raw.githubusercontent.com/nwct/downloads/master/frp/gonggao | sed -n 's/gonggao\=//p'`
-versiontime=`curl -k -s https://raw.githubusercontent.com/nwct/downloads/master/frp/gonggao | sed -n 's/versiontime\=//p'`
+notice=`curl -k -s http://baiwen908.github.io/frp/gonggao | sed -n 's/gonggao\=//p'`
+versiontime=`curl -k -s http://baiwen908.github.io/frp/gonggao | sed -n 's/versiontime\=//p'`
 banquan(){
 echo "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo "::                                                                          ::"
 echo "::      欢迎使用linux & mac 系统的frpc启动脚本，                            ::"
 echo "::      本脚本由  ☆夢幻煋涳☆  编写，如有疑问请联系本人！                    ::"
-echo "::      转载请不要删除本信息！      http://www.lu8.win                      ::"
+echo "::      转载请不要删除本信息！      http://baiwen908.github.io                      ::"
 echo "::                                                                          ::"
 echo "::                                                                          ::"
 echo "::      作者：☆夢幻煋涳☆        QQ群:114888319      $versiontime            ::"
@@ -22,7 +22,7 @@ echo ""
 
 config_server(){
 echo "配置要连接的服务器信息："
-server_addr_default="frp.lu8.win"
+server_addr_default="frp.369345707.xyz"
 server_port_default="7000"
 privilege_token_default="frp888"
 
