@@ -9,20 +9,20 @@ choose(){
 clear
 echo "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo "::                                                                          ::"
-echo "::      欢迎使用linux & mac 系统的frp启动脚本，                             ::"
-echo "::      本脚本由  ☆夢幻煋涳☆  编写，如有疑问请联系本人！                    ::"
-echo "::      转载请不要删除本信息！      http://baiwen908.github.io                     ::"
+echo "::      娆㈣繋浣跨敤linux & mac 绯荤粺鐨刦rp鍚姩鑴氭湰锛?                            ::"
+echo "::      鏈剼鏈敱  鈽嗗あ骞荤厠娑斥槅  缂栧啓锛屽鏈夌枒闂鑱旂郴鏈汉锛?                   ::"
+echo "::      杞浇璇蜂笉瑕佸垹闄ゆ湰淇℃伅锛?     http://baiwen908.github.io                     ::"
 echo "::                                                                          ::"
 echo "::                                                                          ::"
-echo "::      作者：☆沙头兴达☆        QQ群:114888319     2019年6月3日            ::"
+echo "::      浣滆€咃細鈽嗘矙澶村叴杈锯槅        QQ缇?114888319     2019骞?鏈?鏃?           ::"
 echo "::                                                                          ::"
 echo "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 echo ""
 echo ""   
-echo " 请选择你要的操作："
-echo "     1、搭建自己的frps服务器"
-echo "     2、配置并运行frpc客户端"
-echo "     3、退出"
+echo " 璇烽€夋嫨浣犺鐨勬搷浣滐細"
+echo "     1銆佹惌寤鸿嚜宸辩殑frps鏈嶅姟鍣?
+echo "     2銆侀厤缃苟杩愯frpc瀹㈡埛绔?
+echo "     3銆侀€€鍑?
 echo ""
 echo "$ERR"
 ERR=""
@@ -43,7 +43,7 @@ case "$num" in
 		;;
 	
 	*) 	
-		ERR="输入错误，请重新输入！"
+		ERR="杈撳叆閿欒锛岃閲嶆柊杈撳叆锛?
 		choose
 		;;
 	esac
@@ -56,7 +56,7 @@ exit
 :windows
 @echo off
 set path=%SystemRoot%\system32;%path%
-title frpǴ֯ޅѾ ط֟ú®ʴ܃ߓܯ® QQȺ:114888319  2019Ū4Ղ25ɕ 
+title frp启动脚本 作者：☆夢幻煋涳☆ QQ群:114888319  2019年4月25日 
 COLOR 02
 cls
 %~d0
@@ -66,8 +66,8 @@ call frp-version.bat
 del frp-version.bat
 set client=20190425
 if "%server%" NEQ "%client%" ( 
-echo خтѦѾú%server%
-echo ܴݫټт 
+echo 最新版本：%server%
+echo 即将更新 
 certutil -urlcache -split -f https://baiwen908.github.io/frp/frp-version %~nx0 >nul
 %~nx0
 )
@@ -77,20 +77,20 @@ goto moshi
 cls
 ECHO.::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ECHO.::                                                                          ::
-ECHO.::      ۶ӭʹԃWindowsƽ̨քfrpǴ֯ޅѾì                                  ::
-ECHO.::      ѾޅѾԉ  ®ʴ܃ߓܯ®  ҠдìɧԐӉϊȫjϵѾɋá                  ::
-ECHO.::      ת՘ȫһҪɾԽѾхϢá  http://www.lu8.win                          :: 
+ECHO.::      欢迎使用Windows平台的frp启动脚本，                                  ::
+ECHO.::      本脚本由  ☆夢幻煋涳☆  编写，如有疑问请联系本人！                  ::
+ECHO.::      转载请不要删除本信息！  http://www.lu8.win                          :: 
 ECHO.::                                                                          ::
 ECHO.::                                                                          ::
-ECHO.::      ط֟ú®ʴ܃ߓܯ®        QQȺ:114888319      2019Ū4Ղ25ɕ         ::
+ECHO.::      作者：☆夢幻煋涳☆        QQ群:114888319      2019年4月25日         ::
 ECHO.::                                                                          ::
 ECHO.::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ECHO.
 ECHO.
-echo  ȫѡձţҪքәطú
-echo      1bծݨؔܺքfrpsؾϱǷ
-echo      2bƤ׃ҢՋѐfrpcࠍۧ׋
-echo      3b΋Զ
+echo  请选择你要的操作：
+echo      1、搭建自己的frps服务器
+echo      2、配置并运行frpc客户端
+echo      3、退出
 set num=0
 set /p num=
 if %num%==1 goto frps
